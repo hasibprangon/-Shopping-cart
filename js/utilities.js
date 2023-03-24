@@ -21,3 +21,9 @@ function updateCaseNumber(isIncrease) {
 
     return newCaseNumberField;
 }
+
+function updateCaseTotalPrice (newCaseNumberField){
+    const caseTotalPrice = newCaseNumberField * 59;
+    const caseTotalElement = document.getElementById('case-total');
+    caseTotalElement.innerText = caseTotalPrice;
+}
