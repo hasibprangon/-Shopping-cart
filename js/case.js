@@ -11,5 +11,9 @@ document.getElementById('btn-case-plus').addEventListener('click', function () {
 
 
 document.getElementById('btn-case-minus').addEventListener('click', function () {
-  updateCaseNumber(false);
+  const newCaseNumberField = updateCaseNumber(false);
+
+  const caseTotalPrice = newCaseNumberField * 59;
+  const caseTotalElement = document.getElementById('case-total');
+  caseTotalElement.innerText = caseTotalPrice;
 })
